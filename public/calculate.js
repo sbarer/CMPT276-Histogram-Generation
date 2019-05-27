@@ -56,6 +56,10 @@ function low_cut(value, i) {
         alert("Negative values not accepted.\nPlease try a positive value.");
         return false;
     } else if (i == 11) {
+        if (value < Math.min(...grades)) {
+            alert("There is at least one existing grade smaller than the inputted value.\nPlease try a value lower than " + Math.min(...grades) + ".");
+        return false;
+        }
         return true;
     } else if (value <= bounds[i+1]) {
         alert("Inputted value overlaps with another grade bound.\nPlease try a value higher than " + bounds[i+1] + ".");
