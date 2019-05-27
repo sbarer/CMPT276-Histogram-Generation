@@ -56,7 +56,7 @@ function low_cut(value, i) {
         alert("Negative values not accepted.\nPlease try a positive value.");
         return false;
     } else if (i == 11) {
-        if (value < Math.min(...grades)) {
+        if (value > Math.min(...grades)) {
             alert("There is at least one existing grade smaller than the inputted value.\nPlease try a value lower than " + Math.min(...grades) + ".");
         return false;
         }
